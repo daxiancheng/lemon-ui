@@ -40,16 +40,16 @@ button > span {
     top: 2px;
     transition: left  250ms;
 }
-/* button:active > span {
+button:active > span {
     width: 22px;
-} */
+}
 .checked{
     background: #aaa;
 }
 button.checked > span {
     left: calc(100% - 20px);
 }
-/* button:active.checked > span {
-    right: calc(100% - 24px);
-} */
+button:active.checked > span {
+    margin-left: -4px;
+}
 </style>
