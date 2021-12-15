@@ -16,9 +16,9 @@ const routes = [{
         //     component: () => import('@components/button.vue')
         // },
         {
-            path: 'select',
-            name: 'select',
-            component: () => import('@components/select.vue')
+            path: 'switch',
+            name: 'switch',
+            component: () => import('@views/switchDemo.vue')
         }
     ]
 },{

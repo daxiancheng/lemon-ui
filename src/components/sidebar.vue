@@ -19,8 +19,8 @@ export default defineComponent({
           path:'/content',
           name: '按钮'
         }, {
-          path:'/content/select',
-          name: '选择器'
+          path:'/content/switch',
+          name: '开关'
         },{
           path:'/content/button',
           name: '按钮'
