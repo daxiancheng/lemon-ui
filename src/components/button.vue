@@ -1,52 +1,71 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
-
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <button :class="[classTheme, sizeTheme]">
+    <slot></slot>
+  </button>
 </template>
 
+<script lang="ts">
+import { computed, defineComponent } from 'vue'
+
+export default defineComponent({
+  props: {
+    theme: {
+      type: String,
+      default:  'normal'
+    },
+    size: {
+      type: String,
+      default: 'normal'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
+  setup(props) {
+    const { theme, size } = props
+    const classTheme = computed(()=>{
+      return 'lemon-theme-' + theme
+    })
+    const sizeTheme = computed(()=>{
+      return 'lemon-size-' + size
+    })
+    return {
+      classTheme,
+      sizeTheme
+    }
+  },
+})
+</script>
+
 <style scoped>
-a {
-  color: #42b983;
-}
-
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
+ button {
+   outline: none;
+   border: none;
+   border-radius: 4px;
+   color: #2c3e50;
+ }
+ .lemon-theme-normal {
+   /* background-color: rgb(209, 195, 65); */
+   border: 1px solid #ddd;
+   color: rgb(209, 195, 65);
+   background-color: transparent;
+ }
+ .lemon-theme-primary {
+   background-color: rgb(209, 195, 65);
+   color: #fff;
+ }
+ .lemon-theme-danger {
+   background-color: red;
+   color: #fff;
+ }
+ .lemon-size-normal {
+   padding: 0.4em 1em;
+ }
+ .lemon-size-large {
+   padding: 0.6em 1.4em;
+ }
+ .lemon-size-small {
+   padding: 0.4em 0.6em;
+ }
 </style>

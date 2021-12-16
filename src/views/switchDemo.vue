@@ -1,5 +1,13 @@
 <template>
-    <Switch v-model:checked="checked"></Switch>
+    <div class="switchContent">
+        <Switch v-model:checked="checked"></Switch>
+    </div>
+    <div class="switchContent">
+        <Switch v-model:checked="checked1"></Switch>
+    </div>
+    <div class="switchContent">
+        <Switch v-model:checked="checked2" :disabled="true"></Switch>
+    </div>
 </template>
 
 <script lang="ts">
@@ -13,13 +21,20 @@ export default defineComponent({
     },
     setup() {
         const checked = ref(false)
+        const checked1 = ref(true)
+        const checked2 = ref(true)
         return {
-            checked
+            checked,
+            checked1,
+            checked2
         }
     },
 })
 </script>
 
 <style scoped>
-
+    .switchContent {
+        display: inline-block;
+        margin: 20px;
+    }
 </style>

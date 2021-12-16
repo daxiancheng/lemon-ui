@@ -1,12 +1,13 @@
 <template>
-    <button :class="{checked}" @click="toggle"><span></span></button>
+    <button :class="{checked, disabled}" @click="toggle" :disabled="disabled"><span></span></button>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
     props:{
-        checked: Boolean
+        checked: Boolean,
+        disabled: Boolean
     },
     setup(props, context) {
         const toggle = () =>{
@@ -51,5 +52,8 @@ button.checked > span {
 }
 button:active.checked > span {
     margin-left: -4px;
+}
+.disabled {  
+    cursor: not-allowed;
 }
 </style>
