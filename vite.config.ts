@@ -12,7 +12,9 @@ export default defineConfig({
     alias: {
       '@assets': resolve(__dirname, 'src/assets'),
       '@components': resolve(__dirname, 'src/components'),
-      '@views': resolve(__dirname, 'src/views')
-    }
+      '@views': resolve(__dirname, 'src/views'),
+      '@utils': resolve(__dirname, 'src/utils')
+    },
+    extensions: ['.ts']
   }
 })

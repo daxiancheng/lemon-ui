@@ -1,5 +1,6 @@
 <template>
-  <button :class="[classTheme, sizeTheme]">
+  <button :class="[classTheme, sizeTheme, {disabled}]">
+    <span v-if="loading" class="lemo-loading"></span>
     <slot></slot>
   </button>
 </template>
@@ -19,6 +20,10 @@ export default defineComponent({
     },
     disabled: {
       type: Boolean,
+      default: false
+    },
+    loading: {
+      type:Boolean,
       default: false
     }
   },
@@ -44,6 +49,10 @@ export default defineComponent({
    border: none;
    border-radius: 4px;
    color: #2c3e50;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
  .lemon-theme-normal {
    /* background-color: rgb(209, 195, 65); */
@@ -67,5 +76,31 @@ export default defineComponent({
  }
  .lemon-size-small {
    padding: 0.4em 0.6em;
+ }
+ .disabled {
+   cursor: not-allowed;
+   background-color: #ddd;
+   color:#fff;
+ }
+ .lemo-loading {
+   width: 14px;
+   height: 14px;
+   display: inline-block;
+   margin-right: 4px;
+   border-radius: 50%;
+   border-color: #fff #fff #fff transparent;
+   border-width: 2px;
+   border-style: solid;
+   animation: lemo-load 1s linear infinite;
+ }
+ .lemon-theme-normal .lemo-loading {
+   border-color: rgb(209, 195, 65) rgb(209, 195, 65) rgb(209, 195, 65) transparent;
+ }
+ .lemon-theme-primary .lemo-loading {
+   border-color: #fff #fff #fff transparent;
+ }
+ @keyframes lemo-load {
+   0%{transform: rotate(0deg);}
+   100%{transform: rotate(360deg);}
  }
 </style>
