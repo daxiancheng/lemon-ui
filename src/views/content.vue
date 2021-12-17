@@ -39,7 +39,7 @@ export default defineComponent({
 <style>
 .downContent {
   display: flex;
-  height: calc(100% - 36px);
+  height: calc(100% - 52px);
   background-color: rgb(250, 248, 240);
 }
 aside {

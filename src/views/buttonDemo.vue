@@ -6,9 +6,9 @@
     <Button :disabled="true">按钮</Button>
   </div>
   <div class="buttonContent">
-    <Button theme="primary">按钮</Button>
-    <Button theme="primary" size="large">按钮</Button>
-    <Button theme="primary" size="small">按钮</Button>
+    <Button>按钮</Button>
+    <Button size="large">按钮</Button>
+    <Button size="small">按钮</Button>
   </div>
   <div class="buttonContent">
     <Button :loading="true">按钮</Button>

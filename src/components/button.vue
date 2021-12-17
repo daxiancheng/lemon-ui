@@ -96,9 +96,6 @@ export default defineComponent({
  .lemon-theme-normal .lemo-loading {
    border-color: rgb(209, 195, 65) rgb(209, 195, 65) rgb(209, 195, 65) transparent;
  }
- .lemon-theme-primary .lemo-loading {
-   border-color: #fff #fff #fff transparent;
- }
  @keyframes lemo-load {
    0%{transform: rotate(0deg);}
    100%{transform: rotate(360deg);}
