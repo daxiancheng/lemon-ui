@@ -10,11 +10,11 @@ const routes = [{
             name: 'button',
             component: () => import('@views/buttonDemo.vue')
         },
-        // {
-        //     path: 'button',
-        //     name: 'button',
-        //     component: () => import('@components/button.vue')
-        // },
+        {
+            path: 'dialog',
+            name: 'dialog',
+            component: () => import('@views/dialogDemo.vue')
+        },
         {
             path: 'switch',
             name: 'switch',

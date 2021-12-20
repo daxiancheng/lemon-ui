@@ -47,8 +47,8 @@ export default defineComponent({
             name: "lemo-switch",
           },
           {
-            path: "/content/button",
-            name: "按钮",
+            path: "/content/dialog",
+            name: "lemo-dialog",
           },
           {
             path: "/content/button",
