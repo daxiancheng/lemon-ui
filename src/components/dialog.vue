@@ -2,6 +2,7 @@
   <Teleport to="body">
     <div class="mask" v-if="visible">
       <div class="dialogContent">
+        <div class="xcontent" @click="cancel">X</div>
         <header style="padding-left: 20px">
           <slot name="title">添加标题</slot>
         </header>
@@ -28,31 +29,40 @@ import { defineComponent } from "vue";
 import Button from "./button.vue";
 
 export default defineComponent({
-    props: {
-        visible: {
-            type: Boolean,
-            default: false
-        },
-        confirmLoading: {
-            type: Boolean,
-            default: false
-        }
+  props: {
+    visible: {
+      type: Boolean,
+      default: false
     },
+    confirmLoading: {
+      type: Boolean,
+      default: false
+    },
+    ok: {
+      type: Function
+    },
+    cancel: {
+      type: Function
+    }
+  },
   components: {
     Button,
   },
   setup(props, context) {
-      const cancel = () => {
-          console.log(1)
-          context.emit('cancel')
-      }
-      const handleOk = () => {
-          context.emit('ok')
-      }
-      return {
-          cancel,
-          handleOk
-      }
+    const cancel = () => {
+      console.log('bbbbb', props.cancel)
+      props.cancel && props.cancel()
+      context.emit('cancel')
+    }
+    const handleOk = () => {
+      console.log('aaaaa', props.ok)
+      props.ok && props.ok()
+      context.emit('ok')
+    }
+    return {
+      cancel,
+      handleOk
+    }
   },
 });
 </script>
@@ -81,5 +91,12 @@ export default defineComponent({
   top: -100%;
   display: flex;
   justify-content: center;
+}
+.xcontent {
+  display: inline-block;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  cursor: pointer;
 }
 </style>
