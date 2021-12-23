@@ -19,6 +19,11 @@ const routes = [{
             path: 'switch',
             name: 'switch',
             component: () => import('@views/switchDemo.vue')
+        },
+        {
+            path: 'tabs',
+            name: 'tabs',
+            component: () => import('@views/tabsDemo.vue')
         }
     ]
 },{

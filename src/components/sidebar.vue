@@ -1,32 +1,24 @@
 <template>
   <div class="sideContent">
     <ul>
-      <router-link
-        v-for="(item, index) in menuList"
-        :key="index"
-        :to="item.path"
-        ><li
-          :class="{ active: itemIndex == index }"
-          @click="itemClick(item, index)"
-        >
-          {{ item.name }}
-        </li></router-link
-      >
+      <router-link v-for="(item, index) in menuList" :key="index" :to="item.path">
+        <li :class="{ active: itemIndex == index }" @click="itemClick(item, index)">{{ item.name }}</li>
+      </router-link>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, PropType } from "vue";
 import { methods } from "@utils/observable";
 import { itemType } from "@utils/interface";
 
 export default defineComponent({
   setup() {
     let itemIndex = ref(0);
-    const itemClick = function (item: object, index: number) {
+    const itemClick = function (item: itemType, index: number) {
       itemIndex.value = index;
-      methods.setTitle((<itemType>item).name);
+      methods.setTitle(item.name);
     };
     return {
       itemIndex,
@@ -35,7 +27,7 @@ export default defineComponent({
   },
   props: {
     menuList: {
-      type: Array,
+      type: Array as PropType<itemType[]>,
       default() {
         return [
           {
@@ -51,8 +43,8 @@ export default defineComponent({
             name: "lemo-dialog",
           },
           {
-            path: "/content/button",
-            name: "按钮",
+            path: "/content/tabs",
+            name: "lemo-tabs",
           },
         ];
       },
