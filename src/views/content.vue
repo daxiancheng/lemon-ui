@@ -48,5 +48,6 @@ aside {
 }
 main {
   width: 100%;
+  overflow: auto;
 }
 </style>

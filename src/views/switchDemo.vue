@@ -1,3 +1,4 @@
+
 <template>
     <div class="switchContent">
         <Switch v-model:checked="checked"></Switch>

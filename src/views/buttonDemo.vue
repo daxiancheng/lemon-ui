@@ -1,3 +1,6 @@
+
+
+
 <template>
   <div style="color: #37474f; margin-left: 20px">
     <h2>Button 组件示例</h2>
@@ -11,10 +14,12 @@
           <Button :disabled="true">按钮</Button>
         </div>
         <div style="padding: 12px; font-size: 12px">
-          <Button style="font-size: 12px">查看代码</Button>
+          <Button style="font-size: 12px" @click="code1 = !code1">查看代码</Button>
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px">
-          <pre>&lt;Button theme="primary"&gt;按钮&lt;Button/&gt;</pre>
+        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code1">
+          <pre>
+            {{btn1}}
+          </pre>
         </div>
       </div>
     </div>
@@ -27,10 +32,12 @@
           <Button size="small">按钮</Button>
         </div>
         <div style="padding: 12px; font-size: 12px">
-          <Button style="font-size: 12px">查看代码</Button>
+          <Button style="font-size: 12px" @click="code2 = !code2">查看代码</Button>
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px">
-          <pre>&lt;Button size="small"&gt;按钮&lt;Button/&gt;</pre>
+        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code2">
+          <pre>
+            {{btn2}}
+          </pre>
         </div>
       </div>
     </div>
@@ -43,10 +50,12 @@
           <Button theme="danger" :loading="true">按钮</Button>
         </div>
         <div style="padding: 12px; font-size: 12px">
-          <Button style="font-size: 12px">查看代码</Button>
+          <Button style="font-size: 12px" @click="code3 = !code3">查看代码</Button>
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px">
-          <pre>&lt;Button :loading="true"&gt;按钮&lt;Button/&gt;</pre>
+        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code3">
+          <pre>
+            {{btn3}}
+          </pre>
         </div>
       </div>
     </div>
@@ -55,13 +64,26 @@
 
 <script lang="ts">
 import Button from "@components/button.vue";
-import { defineComponent } from "vue";
+import {btn1, btn2, btn3} from './codesource/button'
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   components: {
     Button,
   },
-  setup() {},
+  setup() {
+    const code1 = ref(true)
+    const code2 = ref(false)
+    const code3 = ref(false)
+    return {
+      btn1,
+      btn2,
+      btn3,
+      code1,
+      code2,
+      code3
+    }
+  },
 });
 </script>
 

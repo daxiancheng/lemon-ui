@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vue/compiler-core": "^3.2.26",
     "vue": "^3.2.25",
-    "vue-meditor": "^2.1.1",
     "vue-router": "4"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
-import Markdown from 'vue-meditor'
+import 'github-markdown-css'
 
 const app = createApp(App)
-app.component(Markdown)
+
 app.use(router)
 app.mount('#app')
