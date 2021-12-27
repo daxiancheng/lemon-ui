@@ -35,7 +35,7 @@ export default defineComponent({
 <style scoped>
 .headerContent {
     height: 52px;
-    background: rgb(252, 235, 72);
+    background: #37474F;
     display: flex;
 }
 .logo {

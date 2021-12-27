@@ -52,7 +52,6 @@ export default defineComponent({
         })
         // 方法
         const tabChange = (item: tabType) => {
-            console.log()
             context.emit('update:tabKey', (item.key))
         }
             

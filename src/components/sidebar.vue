@@ -70,7 +70,7 @@ li {
 .sideContent {
   width: 160px;
   height: 100%;
-  background-color: rgb(252, 235, 72);
+  background-color: #37474F;
   font-weight: bold;
 }
 .active {
@@ -79,7 +79,7 @@ li {
 }
 a {
   text-decoration: none;
-  color: #435d77;
+  color: #FFF;
 }
 </style>
 

@@ -61,7 +61,7 @@ export default defineComponent({
    background-color: transparent;
  }
  .lemon-theme-primary {
-   background-color: rgb(209, 195, 65);
+   background-color: #37474F;
    color: #fff;
  }
  .lemon-theme-danger {
