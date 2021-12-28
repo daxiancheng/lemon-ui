@@ -1,7 +1,7 @@
 <template>
     <div class="indexContent">
         <img src="@assets/lemo.png" alt="" srcset="" width="260">
-        <h1 style="font-size: 3em;">lemon-ui 官方中文文档</h1>
+        <h1 style="font-size: 3em;color:#37474f;">lemon-ui 官方中文文档</h1>
         <div>
             <router-link to="/content"><button class="btn1">开始</button></router-link>
             <a href="https://github.com/daxiancheng/lemon-ui" target="_blank"><button class="btn2">了解更多</button></a>

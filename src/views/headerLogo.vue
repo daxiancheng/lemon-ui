@@ -2,7 +2,7 @@
     <div class="headerContent">
         <div class="logo" @click="logoClick">
             <img src="@assets/lemo.png" alt="" srcset="" width="40">
-            <div style="font-size:24px;">lemo-ui</div>
+            <div style="font-size:24px;">lemon-ui</div>
         </div>
         <div class="title">{{title}}</div>
     </div>
