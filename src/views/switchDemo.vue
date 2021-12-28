@@ -1,7 +1,7 @@
 
 <template>
   <div style="color: #37474f; margin-left: 20px">
-    <h2>Button 组件示例</h2>
+    <h2>Switch 组件示例</h2>
     <div class="ButtonBox">
       <div>
         <div style="padding: 12px; font-size: 14px">常规用法</div>
@@ -14,7 +14,7 @@
             >查看代码</Button
           >
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code1">
+        <div class="sourceContent" v-show="code1">
           <pre>
             {{ switch1 }}
           </pre>
@@ -32,7 +32,7 @@
             >查看代码</Button
           >
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code2">
+        <div class="sourceContent" v-show="code2">
           <pre>
             {{ switch2 }}
           </pre>
@@ -74,20 +74,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.ButtonBox {
-  border: 1px solid #ddd;
-  width: 460px;
-  margin-bottom: 20px;
-  overflow: auto;
-}
-.buttonContent {
-  width: 100%;
-  /* border:  1px solid; */
-  display: flex;
-  justify-content: space-around;
-  padding: 12px;
-  align-items: center;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
+
 </style>

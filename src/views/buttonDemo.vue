@@ -16,7 +16,7 @@
         <div style="padding: 12px; font-size: 12px">
           <Button style="font-size: 12px" @click="code1 = !code1">查看代码</Button>
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code1">
+        <div class="sourceContent" v-show="code1">
           <pre>
             {{btn1}}
           </pre>
@@ -34,7 +34,7 @@
         <div style="padding: 12px; font-size: 12px">
           <Button style="font-size: 12px" @click="code2 = !code2">查看代码</Button>
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code2">
+        <div class="sourceContent" v-show="code2">
           <pre>
             {{btn2}}
           </pre>
@@ -52,7 +52,7 @@
         <div style="padding: 12px; font-size: 12px">
           <Button style="font-size: 12px" @click="code3 = !code3">查看代码</Button>
         </div>
-        <div style="border-top: 1px solid #ddd; padding: 12px" v-show="code3">
+        <div class="sourceContent" v-show="code3">
           <pre>
             {{btn3}}
           </pre>
@@ -88,19 +88,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.ButtonBox {
-  border: 1px solid #ddd;
-  width: 460px;
-  margin-bottom: 20px;
-}
-.buttonContent {
-  width: 100%;
-  /* border:  1px solid; */
-  display: flex;
-  justify-content: space-around;
-  padding: 12px;
-  align-items: center;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
 </style>

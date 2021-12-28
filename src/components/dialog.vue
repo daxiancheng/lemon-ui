@@ -34,10 +34,6 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
-    confirmLoading: {
-      type: Boolean,
-      default: false
-    },
     ok: {
       type: Function
     },

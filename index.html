@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lemo-ui</title>
-    <style>
-      body,html{
-        margin: 0;
-        padding: 0;
-        height: 100%;
-      }
-      *{
-        box-sizing: border-box;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lemo-ui</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .ButtonBox {
+      border: 1px solid #ddd;
+      width: 460px;
+      margin-bottom: 20px;
+
+    }
+
+    .buttonContent {
+      width: 100%;
+      /* border:  1px solid; */
+      display: flex;
+      justify-content: space-around;
+      padding: 12px;
+      align-items: center;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .sourceContent {
+      border-top: 1px solid #ddd;
+      padding: 12px;
+      height: 412px;
+      overflow: auto;
+    }
+    /* 滚动条整体，高宽分别对应横竖滚动条的尺寸*/
+    .sourceContent::-webkit-scrollbar{
+      width: 6px;
+      height: 6px;
+    }
+    /* 定义滚动条轨道 */
+    .sourceContent::-webkit-scrollbar-track{
+      border-radius:2px;
+      background-color: #eee;
+    }
+    /* 定义滑块 */
+    .sourceContent::-webkit-scrollbar-thumb{
+      border-radius:2px;
+      background-color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
