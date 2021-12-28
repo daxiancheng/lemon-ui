@@ -16,7 +16,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
+    padding-top: 120px;
 }
 button {
     outline: none;
