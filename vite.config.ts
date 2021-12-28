@@ -11,6 +11,7 @@ const dfConfig = defineConfig({
   server: {
     port: 4396
   },
+  base:'./',
   resolve: {
     alias: {
       '@assets': resolve(__dirname, 'src/assets'),
