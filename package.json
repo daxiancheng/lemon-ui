@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vue/compiler-core": "^3.2.26",
+    "prismjs": "^1.25.0",
     "vue": "^3.2.25",
     "vue-router": "4"
   },

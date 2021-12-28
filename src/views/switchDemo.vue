@@ -15,9 +15,7 @@
           >
         </div>
         <div class="sourceContent" v-show="code1">
-          <pre>
-            {{ switch1 }}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(switch1.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -33,9 +31,7 @@
           >
         </div>
         <div class="sourceContent" v-show="code2">
-          <pre>
-            {{ switch2 }}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(switch2.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -48,6 +44,7 @@ import Button from "@components/button.vue";
 // 组件名大写
 import Switch from "@components/switch.vue";
 import { switch1, switch2 } from "./codesource/switch";
+const Prism = (<any>window).Prism
 
 export default defineComponent({
   components: {
@@ -68,6 +65,7 @@ export default defineComponent({
       switch2,
       code1,
       code2,
+      Prism
     };
   },
 });

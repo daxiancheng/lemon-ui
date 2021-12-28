@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
-import 'github-markdown-css'
+import 'prismjs/themes/prism.css'
+import 'prismjs'
 
 const app = createApp(App)
 

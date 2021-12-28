@@ -16,9 +16,7 @@
           >
         </div>
         <div class="sourceContent" v-show="code1">
-          <pre>
-            {{ tabs1 }}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(tabs1.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -31,6 +29,7 @@ import Button from "@components/button.vue";
 import {tabs1} from './codesource/tabs'
 import Tabs from '@components/tabs.vue'
 import Tab from '@components/tab.vue'
+const Prism = (<any>window).Prism
 
 export default defineComponent({
     components: {
@@ -44,7 +43,8 @@ export default defineComponent({
         return {
             tabKey,
             tabs1,
-            code1
+            code1,
+            Prism
         }
     },
 })

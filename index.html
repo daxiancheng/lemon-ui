@@ -40,7 +40,8 @@
       border-top: 1px solid #ddd;
       padding: 12px;
       height: 412px;
-      overflow: auto;
+      overflow-y: auto;
+      background: #f5f2f0
     }
     /* 滚动条整体，高宽分别对应横竖滚动条的尺寸*/
     .sourceContent::-webkit-scrollbar{
@@ -56,6 +57,9 @@
     .sourceContent::-webkit-scrollbar-thumb{
       border-radius:2px;
       background-color: #aaa;
+    }
+    pre[class*="language-css"]{
+      overflow:unset !important;
     }
   </style>
 </head>

@@ -21,9 +21,7 @@
           >
         </div>
         <div class="sourceContent" v-show="code1">
-          <pre>
-            {{ dialog1 }}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(dialog1.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -39,9 +37,7 @@
           >
         </div>
         <div class="sourceContent" v-show="code2">
-          <pre>
-            {{ dialog2 }}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(dialog2.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -54,6 +50,7 @@ import Dialog from "@components/dialog.vue";
 import Button from "@components/button.vue";
 import { openDialog } from "@utils/openDialog";
 import { dialog1, dialog2 } from "./codesource/dialog";
+const Prism = (<any>window).Prism
 export default defineComponent({
   components: {
     Dialog,
@@ -88,13 +85,11 @@ export default defineComponent({
       code1,
       code2,
       dialog2,
+      Prism
     };
   },
 });
 </script>
 
 <style scoped>
-.demoContent {
-  margin: 40px 20px;
-}
 </style>

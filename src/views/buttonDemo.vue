@@ -17,9 +17,7 @@
           <Button style="font-size: 12px" @click="code1 = !code1">查看代码</Button>
         </div>
         <div class="sourceContent" v-show="code1">
-          <pre>
-            {{btn1}}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(btn1.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -35,9 +33,7 @@
           <Button style="font-size: 12px" @click="code2 = !code2">查看代码</Button>
         </div>
         <div class="sourceContent" v-show="code2">
-          <pre>
-            {{btn2}}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(btn2.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -53,9 +49,7 @@
           <Button style="font-size: 12px" @click="code3 = !code3">查看代码</Button>
         </div>
         <div class="sourceContent" v-show="code3">
-          <pre>
-            {{btn3}}
-          </pre>
+          <pre class="language-css" v-html="Prism.highlight(btn3.trim(), Prism.languages.html, 'html')" /> 
         </div>
       </div>
     </div>
@@ -66,6 +60,8 @@
 import Button from "@components/button.vue";
 import {btn1, btn2, btn3} from './codesource/button'
 import { defineComponent, ref } from "vue";
+const Prism = (<any>window).Prism
+console.log('Prism', Prism)
 
 export default defineComponent({
   components: {
@@ -81,7 +77,8 @@ export default defineComponent({
       btn3,
       code1,
       code2,
-      code3
+      code3,
+      Prism
     }
   },
 });
