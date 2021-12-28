@@ -15,6 +15,7 @@ export let dialog1 = `
     <Button theme="primary" @click="visible = true">dialog</Button>
 </template>
 <script lang="ts">
+import { defineComponent, ref } from 'vue'
 import Dialog from "@components/dialog.vue";
 
 export default defineComponent({
@@ -46,6 +47,7 @@ export let dialog2 = `
     <Button theme="primary" @click="open">dialog</Button>
 </template>
 <script lang="ts">
+import { defineComponent, ref } from 'vue'
 // start 可以单独放在一个文件中
 import Dialog from "@components/dialog.vue";
 import { createApp, h } from 'vue'

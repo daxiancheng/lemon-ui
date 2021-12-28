@@ -6,6 +6,7 @@ export let btn1 = `
     <Button :disabled="true">按钮</Button>
 </template>
 <script lang="ts">
+import { defineComponent } from 'vue'
 import Button from "@components/button.vue";
 
 export default defineComponent({
@@ -25,6 +26,7 @@ export let btn2 = `
     <Button size="small">按钮</Button>
 </template>
 <script lang="ts">
+import { defineComponent } from 'vue'
 import Button from "@components/button.vue";
 
 export default defineComponent({
@@ -43,6 +45,7 @@ export let btn3 = `
     <Button theme="danger" :loading="true">按钮</Button>
 </template>
 <script lang="ts">
+import { defineComponent } from 'vue'
 import Button from "@components/button.vue";
 
 export default defineComponent({

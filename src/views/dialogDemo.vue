@@ -29,7 +29,7 @@
     </div>
     <div class="ButtonBox">
       <div>
-        <div style="padding: 12px; font-size: 14px">render函数渲染</div>
+        <div style="padding: 12px; font-size: 14px">render 函数渲染</div>
         <div class="buttonContent" style="justify-content: flex-start">
           <Button theme="primary" @click="open">dialog</Button>
         </div>

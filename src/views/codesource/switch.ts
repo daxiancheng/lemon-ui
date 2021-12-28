@@ -4,6 +4,7 @@ export let switch1 = `
     <Switch v-model:checked="checked1"></Switch>
 </template>
 <script lang="ts">
+import { defineComponent, ref } from 'vue'
 import Switch from "@components/Switch.vue";
 
 export default defineComponent({
@@ -26,6 +27,7 @@ export let switch2 = `
     <Switch v-model:checked="checked2" :disabled="true"></Switch>
 </template>
 <script lang="ts">
+import { defineComponent, ref } from 'vue'
 import Switch from "@components/Switch.vue";
 
 export default defineComponent({

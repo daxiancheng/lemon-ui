@@ -83,6 +83,7 @@ export default defineComponent({
     cursor: pointer;
     border-bottom: 1px solid #ddd;
     font-weight: bold;
+    color: #2c3e50;;
 }
 .tabItem {
     padding: 12px 16px;
@@ -90,17 +91,19 @@ export default defineComponent({
 }
 .tabContent {
     padding: 12px 16px;
+    color: #2c3e50;;
 }
 .tabItem:last-child {
     margin-right: 0;
 }
 .select {
-    color: rgb(209, 195, 65);
+    color: #2c3e50;;
 }
 .lemo-slide {
     width: 0px;
     height: 2px;
-    background-color: rgb(209, 195, 65);
+    /* background-color: rgb(209, 195, 65); */
+    background-color: #37474F;
     position:relative;
     top: -1px;
     transition: all 250ms;
