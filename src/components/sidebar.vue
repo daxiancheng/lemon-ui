@@ -32,19 +32,19 @@ export default defineComponent({
         return [
           {
             path: "/content",
-            name: "lemo-button",
+            name: "lemon-button",
           },
           {
             path: "/content/switch",
-            name: "lemo-switch",
+            name: "lemon-switch",
           },
           {
             path: "/content/dialog",
-            name: "lemo-dialog",
+            name: "lemon-dialog",
           },
           {
             path: "/content/tabs",
-            name: "lemo-tabs",
+            name: "lemon-tabs",
           },
         ];
       },
